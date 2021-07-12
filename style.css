@@ -197,6 +197,9 @@ footer a{
 }
 
 @media(max-width: 500px){
+  body{
+    width: 100%;
+  }
   .title-bar{
     flex-flow: column wrap;
     justify-content: center; 
@@ -205,17 +208,32 @@ footer a{
   }
   .title-bar h3{
     width: 100%;
-    font-size: 16rem;
     text-align: center;
   }
   .title-bar nav{
     flex-flow: column nowrap;
+    width: 80%;
   }
   .title-bar nav a{
     width: 80%;
-    padding: 5rem 0;
+    padding: 1em 0;
     text-align: center;
-    font-size: 7rem;
-    margin: 2rem 0;
+    margin: .3rem 0;
   }
+  .header-block{
+  }
+  .header-block div h1{
+    font-size: 6rem;
+  }
+  .project-blocks{
+    height: 80rem;
+    border: none;
+  }
+  .project-block div{
+    width: 20rem;
+    height: 12.5rem;
+    background-size: 100%;
+    }
+  }
+
 }
