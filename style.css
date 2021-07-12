@@ -1,0 +1,238 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+  /* border: 1px solid grey; */
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* My code */
+html{
+  font-size: 62.5%;
+  background-color: grey;
+  box-sizing: border-box;
+}
+body{
+  width: 1448px;
+  margin: 0 auto;
+  font-family: sans-serif;
+  background-color: white;
+}
+.title-bar{
+  display: flex;
+  justify-content: space-between;
+  font-size: 3rem;
+  border-bottom: .2rem solid grey;
+}
+.title-bar h3{
+  font-size: 5rem;
+  font-family: 'Chelsea Market', cursive;
+  padding: 1rem 2rem;
+}
+.title-bar nav{
+  width: 45%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.title-bar a{
+  text-decoration: none;
+  padding: 1rem;
+  color: black;
+  text-shadow: .2rem .2rem grey;
+  transition-duration: .3s;
+  background-color: #ff5c33;
+}
+.title-bar a:hover{
+  background-color: white;
+}
+.header-block{
+  width: 90rem;
+  margin: 4rem auto;
+  display: flex;
+  position: relative;
+  flex-flow: column nowrap;
+  padding-top: 44%;
+  justify-content: center;
+  align-items: center;
+}
+.header-block div{
+  background-image: url(https://picsum.photos/900/400?random=1);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+
+}
+.header-block h1{
+  font-size: 7rem;
+  font-family: 'Chelsea Market', cursive;
+  text-shadow: .3rem .3rem white;
+}
+.header-block a{
+  text-decoration: none;
+  font-size: 3rem;
+  padding: 1rem;
+  color: white;
+  text-shadow: .1rem .1rem black;
+  transition-duration: .3s;
+  border: .2rem solid black;
+  border-radius: 2rem;
+  background-color: rgba(0,0,0,0.6);
+}
+.project-blocks{
+  display: flex;
+  flex-flow: row wrap;
+  height: 80rem;
+  justify-content: space-evenly;
+  align-content: space-evenly;
+  border-top: .2rem solid grey;
+}
+.project-block{
+  border: .3rem solid grey;
+  border-radius: 2rem;
+  overflow: hidden;
+}
+.project-block div{
+  width: 40rem;
+  height: 25rem;
+}
+.one{
+  background-image: url(https://picsum.photos/400/250?random=1);
+}
+.two{
+  background-image: url(https://picsum.photos/400/250?random=2);
+}
+.three{
+  background-image: url(https://picsum.photos/400/250?random=3);
+}
+.four{
+  background-image: url(https://picsum.photos/400/250?random=4);
+}
+.five{
+  background-image: url(https://picsum.photos/400/250?random=5);
+}
+.six{
+  background-image: url(https://picsum.photos/400/250?random=6);
+}
+.project-block h3{
+  text-align: center;
+  font-size: 3rem;
+  padding: 2rem;
+}
+footer{
+  height: 12rem;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer a{
+  text-decoration: none;
+  font-size: 3rem;
+  padding: 1.5rem;
+  color: black;
+  text-shadow: .2rem .2rem grey;
+  transition-duration: .3s;
+  margin: 0 3rem;
+  background-color: #ff5c33;
+  border-radius: 50%
+}
+
+@media(max-width: 800px){
+  .header-block{
+    margin: 4rem 0;
+    width: 100%;
+  }
+}
+
+@media(max-width: 500px){
+  body{
+    width: 100%;
+  }
+  .title-bar{
+    flex-flow: column wrap;
+    justify-content: center; 
+    align-items: center;
+    border: none;
+  }
+  .title-bar h3{
+    width: 100%;
+    text-align: center;
+  }
+  .title-bar nav{
+    flex-flow: column nowrap;
+    width: 80%;
+  }
+  .title-bar nav a{
+    width: 80%;
+    padding: 1em 0;
+    text-align: center;
+    margin: .3rem 0;
+  }
+  .header-block{
+  }
+  .header-block div h1{
+    font-size: 6rem;
+  }
+  .project-blocks{
+    height: 80rem;
+    border: none;
+  }
+  .project-block div{
+    width: 20rem;
+    height: 12.5rem;
+    background-size: 100%;
+  }
+
+}
