@@ -52,9 +52,10 @@ table {
 html{
   font-size: 62.5%;
   background-color: grey;
+  box-sizing: border-box;
 }
 body{
-  max-width: 1448px;
+  width: 1448px;
   margin: 0 auto;
   font-family: sans-serif;
   background-color: white;
@@ -89,15 +90,29 @@ body{
   background-color: white;
 }
 .header-block{
-  height: 40rem;
-  background-color: grey;
-  background-image: url(https://picsum.photos/900/400?random=1);
   width: 90rem;
   margin: 4rem auto;
+  display: flex;
+  position: relative;
+  flex-flow: column nowrap;
+  padding-top: 44%;
+  justify-content: center;
+  align-items: center;
+}
+.header-block div{
+  background-image: url(https://picsum.photos/900/400?random=1);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
+
 }
 .header-block h1{
   font-size: 7rem;
@@ -172,4 +187,35 @@ footer a{
   margin: 0 3rem;
   background-color: #ff5c33;
   border-radius: 50%
+}
+
+@media(max-width: 800px){
+  .header-block{
+    margin: 4rem 0;
+    width: 100%;
+  }
+}
+
+@media(max-width: 500px){
+  .title-bar{
+    flex-flow: column wrap;
+    justify-content: center; 
+    align-items: center;
+    border: none;
+  }
+  .title-bar h3{
+    width: 100%;
+    font-size: 16rem;
+    text-align: center;
+  }
+  .title-bar nav{
+    flex-flow: column nowrap;
+  }
+  .title-bar nav a{
+    width: 80%;
+    padding: 5rem 0;
+    text-align: center;
+    font-size: 7rem;
+    margin: 2rem 0;
+  }
 }
